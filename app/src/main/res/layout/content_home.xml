@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mahe.eecevents3106.HomeActivity"
+    tools:showIn="@layout/app_bar_home"
+    android:background="@color/colorPrimaryDark">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/events_in_our_college"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/textEVENTSINCOL"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/textEVENTSINCOL"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/viewEventsInCol"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewEventsInCol"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- CardView for Department Events -->
+
+            <android.support.v7.widget.CardView
+                android:layout_width="350sp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/cardDeptACT"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp">
+
+                    <ImageView
+                        android:layout_width="335dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:id="@+id/imgDeptEVENT"
+                        android:background="@color/colorPrimaryDark"
+                        android:src="@drawable/eec"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgDeptEVENT"
+                        android:text="@string/department_events"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="25sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:id="@+id/tvDeptEvent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvDeptEvent"
+                        android:text="@string/visit"
+                        android:layout_alignParentRight="true"
+                        android:textSize="20sp"
+                        android:layout_marginRight="30sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="30sp"
+                        android:id="@+id/textViewVisitDept" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- CardView for Vulcans  Events -->
+
+            <android.support.v7.widget.CardView
+                android:layout_width="350sp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/cardVulcanACT"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_below="@id/cardDeptACT"
+                android:layout_marginStart="5sp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp">
+
+                    <ImageView
+                        android:layout_width="335dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:id="@+id/imgVulcanEVENT"
+                        android:background="@color/colorPrimaryDark"
+                        android:src="@drawable/vulc"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgVulcanEVENT"
+                        android:text="@string/the_vulcans"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="25sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:id="@+id/tvVulcanEvent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvVulcanEvent"
+                        android:text="@string/visit"
+                        android:layout_alignParentRight="true"
+                        android:textSize="20sp"
+                        android:layout_marginRight="30sp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30sp"
+                        android:id="@+id/textviewVisitVulcan"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!-- CardView for Sports Events -->
+
+            <android.support.v7.widget.CardView
+                android:layout_width="350sp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:id="@+id/cardAadACT"
+                android:layout_below="@id/cardVulcanACT"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp">
+
+                    <ImageView
+                        android:layout_width="330dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:id="@+id/imgAadEVENT"
+                        android:background="@color/colorPrimaryDark"
+                        android:src="@drawable/football"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgAadEVENT"
+                        android:text="@string/aadukalam"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="25sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:id="@+id/tvAadEvent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvAadEvent"
+                        android:text="@string/visit"
+                        android:layout_alignParentRight="true"
+                        android:textSize="20sp"
+                        android:layout_marginRight="30sp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30sp"
+                        android:id="@+id/textviewVisitAAD"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

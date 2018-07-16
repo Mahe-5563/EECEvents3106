@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="#fff"
+    tools:context="com.example.mahe.eecevents3106.NavActivities.VulcansActivity">
+
+
+    <ImageView
+        android:id="@+id/vulcansLOG"
+        android:layout_width="wrap_content"
+        android:layout_height="110sp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/vulcans_team_logo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vulcancop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/vulcansLOG"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/view_VUL"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_VUL">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVulcDesc"
+                android:textSize="17sp"
+                android:text="@string/vulc_description"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="10sp"
+                android:textAlignment="center"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:textColor="#D50000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVulcDesc2"
+                android:layout_below="@id/tvVulcDesc"
+                android:layout_marginBottom="10sp"
+                android:textAlignment="center"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:textColor="#D50000"
+                android:textSize="17sp"
+                android:text="@string/swagat_desc"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVulcDesc3"
+                android:layout_below="@id/tvVulcDesc2"
+                android:layout_marginBottom="10sp"
+                android:textAlignment="center"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:textColor="#D50000"
+                android:textSize="17sp"
+                android:text="@string/talentia_desc"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/tvVulcDesc3"
+                android:text="@string/the_vulcans_team"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/BTNVulcanTeam"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/BTNVulcanTeam"
+                android:text="@string/vulcan_events"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/BTNVulcanEvents"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

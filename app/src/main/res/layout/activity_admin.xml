@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    tools:context="com.example.mahe.eecevents3106.AdminActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeVIEWLAY">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/administrator_column"
+            android:textSize="25sp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/textAdmin"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <View
+            android:layout_width="350dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/textAdmin"
+            android:background="#000"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_photo"
+            android:layout_below="@id/textAdmin"
+            android:id="@+id/textuplPhot"
+            android:layout_margin="20sp"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <ImageButton
+            android:contentDescription="@string/add_image"
+            android:layout_width="300sp"
+            android:layout_height="250sp"
+            android:layout_below="@id/textuplPhot"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/BTNuploadPhoto"
+            android:text="@string/choose_image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/uploadimg"
+            android:background="@null" />
+
+        <View
+            android:layout_width="350dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/BTNuploadPhoto"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="15dp"
+            android:id="@+id/ViEwIMAGE"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_below="@id/ViEwIMAGE"
+            android:id="@+id/DeptSpinner"
+            android:textSize="25sp"
+            android:text="@string/department_name"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DeptSpinner"
+            android:layout_margin="20sp"
+            android:hint="@string/enter_the_name_of_the_event"
+            android:id="@+id/editEventName"
+            android:inputType="textCapWords"
+            android:focusableInTouchMode="true"
+            android:focusable="true">
+
+
+        </EditText>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/editEventName"
+            android:id="@+id/editEvenDesciption"
+            android:layout_margin="20sp"
+            android:hint="@string/insert_your_event_description"
+            android:maxLength="400"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editEvenDesciption"
+            android:layout_margin="20dp"
+            android:hint="@string/select_the_event_date"
+            android:id="@+id/dateSelect"
+            tools:ignore="TextFields"
+            android:focusable="false"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateSelect"
+            android:id="@+id/editEventInvitation"
+            android:layout_margin="20dp"
+            android:hint="@string/enter_your_invitation_text"
+            tools:ignore="TextFields"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editEventInvitation"
+            android:id="@+id/btn_nextevent"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:text="Upload any upcoming/next Events"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mandatory_fields"
+            android:layout_below="@id/btn_nextevent"
+            android:id="@+id/tvMand"
+            android:layout_margin="10dp"
+            android:textColor="#D50000"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10dp"
+            android:text="@string/post_the_event"
+            android:layout_below="@id/tvMand"
+            android:id="@+id/BTNeventPost"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10sp" />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

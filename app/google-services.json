@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "781337088749",
+    "firebase_url": "https://eecevents3106-b9367.firebaseio.com",
+    "project_id": "eecevents3106-b9367",
+    "storage_bucket": "eecevents3106-b9367.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781337088749:android:0db460986d3ac6da",
+        "android_client_info": {
+          "package_name": "com.example.mahe.eecevents3106"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781337088749-hb4tt0l0ljejiobhgrac5itbsakng0b9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mahe.eecevents3106",
+            "certificate_hash": "cf198d0cc34064751eab1901224e22ea38265b80"
+          }
+        },
+        {
+          "client_id": "781337088749-0j99gikfmr1bjl4gmp3b7q7qeo2mdemh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mahe.eecevents3106",
+            "certificate_hash": "3af0f6e9408386989e10182984b7367a91cbead2"
+          }
+        },
+        {
+          "client_id": "781337088749-jallnggdrhbneccj9uf284539hq8vev0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzq5eJPGcA5xr6a69CJBWrnv_FaC0zoKg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781337088749-jallnggdrhbneccj9uf284539hq8vev0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

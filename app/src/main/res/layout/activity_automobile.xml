@@ -1,0 +1,312 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/auto"
+    tools:context="com.example.mahe.eecevents3106.Department.CivilActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automibile_engineering"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:id="@+id/AUtoTV"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="serif"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/AUtoTV"
+            android:background="@color/colorPrimary"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/VIEW"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/VIEW"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/cv_automob"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/CDCivilIMG"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/IMG"
+                                    android:layout_width="330dp"
+                                    android:layout_height="250dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:contentDescription="@string/displays_the_image_of_the_department_event" />
+
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_below="@id/CDCivilIMG"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_margin="20dp"
+                            android:id="@+id/view" />
+
+                        <TextView
+                            android:id="@+id/EVENT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/view"
+                            android:textAllCaps="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/event_name"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-smallcaps"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/EVENT"
+                            android:id="@+id/Desc"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="@string/your_event_description_comes_down_here"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-condensed"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_below="@id/Desc"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/view1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view1"
+                            android:text="@string/date"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000"
+                            android:id="@+id/dateNAME"
+                            android:textStyle="bold"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/dateNAME"
+                            android:layout_below="@id/view1"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/_28_09_1997"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@id/dateNAME"
+                            android:id="@+id/dateDate"
+                            android:fontFamily="monospace"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_menu_share"
+                            android:layout_below="@id/dateNAME"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:id="@+id/shareIMG"
+                            android:layout_marginStart="20dp"
+                            android:contentDescription="@string/share_button"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/share"
+                            android:layout_below="@id/dateNAME"
+                            android:layout_toRightOf="@id/shareIMG"
+                            android:layout_marginTop="21dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="17sp"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:id="@+id/AutoBtnActShare"
+                            android:layout_toEndOf="@id/shareIMG"
+                            android:layout_marginStart="10dp" />
+
+                        <Spinner
+                            android:layout_width="160sp"
+                            android:layout_height="35sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/dateDate"
+                            android:layout_marginRight="15sp"
+                            android:layout_marginTop="17sp"
+                            android:layout_marginEnd="15sp"
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/autoINVITELog">
+
+                        </Spinner>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/autoINVITELog"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="15dp"
+                            android:textColor="#D50000"
+                            android:textSize="13sp"
+                            android:id="@+id/tvPeopAttendAuto"/>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_automob"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_next_eve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="NO UPCOMING EVENTS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-smallcaps"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@id/tv_next_eve"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/v_upeve"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/v_upeve"
+                            android:text="@string/date"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000"
+                            android:id="@+id/dat_upeve"
+                            android:textStyle="bold"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/dat_upeve"
+                            android:layout_below="@id/v_upeve"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/n_a"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@id/dat_upeve"
+                            android:id="@+id/date_upev"
+                            android:fontFamily="monospace"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@id/date_upev"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/v2_upeve"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/v2_upeve"
+                            android:id="@+id/tv_next_eve_desc"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginRight="20dp"
+                            android:text="No Description found"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-condensed"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

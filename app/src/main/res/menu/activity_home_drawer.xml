@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_dept"
+            android:icon="@drawable/department"
+            android:title="@string/department_events" />
+
+        <item
+            android:id="@+id/nav_vulcans"
+            android:icon="@drawable/vulcans"
+            android:title="@string/vulcans" />
+        <item
+            android:id="@+id/nav_sportseve"
+            android:icon="@drawable/worlcup"
+            android:title="@string/sports_events" />
+        <item
+            android:id="@+id/nav_sympo"
+            android:icon="@drawable/sympo"
+            android:title="@string/national_level_symposiums"/>
+
+
+    </group>
+
+    <item android:title="@string/annexure">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/logout" />
+
+        </menu>
+    </item>
+
+</menu>

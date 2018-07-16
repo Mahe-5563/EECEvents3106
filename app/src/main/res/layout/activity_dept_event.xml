@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mahe.eecevents3106.NavActivities.DeptEventActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textHeading"
+        android:text="@string/departments"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#0010AB"
+        android:textStyle="bold"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:id="@+id/VIEWDEPT"
+        android:layout_below="@id/textHeading"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/VIEWDEPT"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/btnAUTO"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="@string/automibile_engineering"
+                android:fontFamily="sans-serif-smallcaps"
+                android:background="#E91E63"
+                android:layout_marginRight="5dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:textSize="23sp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnCIVIL"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="@string/civil_engineering"
+                android:fontFamily="sans-serif-smallcaps"
+                android:background="#D50000"
+                android:layout_marginRight="5dp"
+                android:textSize="23sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_below="@id/btnAUTO"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnCSE"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/btnCIVIL"
+                android:text="@string/computer_sceince_and_engineering"
+                android:fontFamily="sans-serif-smallcaps"
+                android:background="#4A148C"
+                android:layout_marginRight="5dp"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnECE"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/btnCSE"
+                android:text="@string/electronics_and_communications_engineering"
+                android:background="#2196F3"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_marginRight="5dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/btnEEE"
+                android:layout_below="@id/btnECE"
+                android:text="@string/electrical_and_electronics_engineering"
+                android:fontFamily="sans-serif-smallcaps"
+                android:background="#009688"
+                android:layout_marginRight="5dp"
+                android:textSize="21sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/btnEIE"
+                android:text="@string/electrical_and_instrumentation_engineering"
+                android:layout_below="@id/btnEEE"
+                android:fontFamily="sans-serif-smallcaps"
+                android:background="#FF9800"
+                android:layout_marginRight="5dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/btnIT"
+                android:layout_below="@id/btnEIE"
+                android:text="@string/information_and_technology"
+                android:fontFamily="sans-serif-smallcaps"
+                android:background="#795548"
+                android:layout_marginRight="5dp"
+                android:textSize="23sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/btnMECH"
+                android:layout_below="@id/btnIT"
+                android:text="@string/mechanical_engineering"
+                android:background="#212121"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="20sp"
+                android:layout_marginRight="5dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/btnMBA"
+                android:layout_below="@id/btnMECH"
+                android:text="@string/master_of_business_administration"
+                android:background="#FD2D00"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="20sp"
+                android:layout_marginRight="5dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/btnMCA"
+                android:layout_below="@id/btnMBA"
+                android:text="@string/master_of_computer_application"
+                android:background="#08FD00"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="20sp"
+                android:layout_marginRight="5dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

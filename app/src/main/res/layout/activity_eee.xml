@@ -1,0 +1,314 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/electrical"
+    tools:context="com.example.mahe.eecevents3106.Department.EEEActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/EEETV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif"
+            android:text="@string/electrical_and_electronics_engineering"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/EEETV"
+            android:background="@color/colorPrimary"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/VIEW"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/VIEW"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/cv_eee"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/CDEEEIMG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/EEEIMG"
+                                    android:layout_width="330dp"
+                                    android:layout_height="250dp"
+                                    android:adjustViewBounds="true"
+                                    android:contentDescription="@string/displays_the_image_of_the_department_event"
+                                    android:scaleType="fitCenter" />
+
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_below="@id/CDEEEIMG"
+                            android:layout_margin="20dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/EEEEVENT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="@string/event_name"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/EEEDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/EEEEVENT"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/your_event_description_comes_down_here"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_below="@id/EEEDesc"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/colorPrimaryDark" />
+
+                        <TextView
+                            android:id="@+id/dateNAME"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="monospace"
+                            android:text="@string/date"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/EEEdateDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view1"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@id/dateNAME"
+                            android:layout_toRightOf="@id/dateNAME"
+                            android:fontFamily="monospace"
+                            android:text="@string/_28_09_1997"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/shareIMG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dateNAME"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:contentDescription="@string/share_button"
+                            android:src="@drawable/ic_menu_share" />
+
+                        <TextView
+                            android:id="@+id/EEEBtnActShare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dateNAME"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="21dp"
+                            android:layout_toEndOf="@id/shareIMG"
+                            android:layout_toRightOf="@id/shareIMG"
+                            android:text="@string/share"
+                            android:textColor="#000"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+
+                        <Spinner
+                            android:id="@+id/eeeINVITELog"
+                            android:layout_width="160sp"
+                            android:layout_height="35sp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/EEEdateDate"
+                            android:layout_marginEnd="15sp"
+                            android:layout_marginRight="15sp"
+                            android:layout_marginTop="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/eeeINVITELog"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="15dp"
+                            android:textColor="#D50000"
+                            android:textSize="13sp"
+                            android:id="@+id/tvPeopAttendEee"/>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_eee"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_next_eve_eee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="NO UPCOMING EVENTS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-smallcaps"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@id/tv_next_eve_eee"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/v_upeve_eee"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/v_upeve_eee"
+                            android:text="@string/date"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#000"
+                            android:id="@+id/dat_upeve_eee"
+                            android:textStyle="bold"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/dat_upeve_eee"
+                            android:layout_below="@id/v_upeve_eee"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/n_a"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@id/dat_upeve_eee"
+                            android:id="@+id/date_upev_eee"
+                            android:fontFamily="monospace"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_below="@id/date_upev_eee"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/v2_upeve_eee"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/v2_upeve_eee"
+                            android:id="@+id/tv_next_eve_desc_eee"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginRight="20dp"
+                            android:text="No Description found"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-condensed"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>
