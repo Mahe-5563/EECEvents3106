@@ -80,7 +80,7 @@ public class AdminActivity extends AppCompatActivity{
 
     ImageButton  btnImage;
     EditText eventName, date, des, invite;
-    Button postevent, nextevent;
+    Button postevent; //nextevent;
     TextView deptSelect;
     ScrollView layout;
 
@@ -134,7 +134,7 @@ public class AdminActivity extends AppCompatActivity{
         postevent = findViewById(R.id.BTNeventPost);
         invite = findViewById(R.id.editEventInvitation);
         layout = findViewById(R.id.scrollView);
-        nextevent = findViewById(R.id.btn_nextevent);
+       // nextevent = findViewById(R.id.btn_nextevent);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         storage = FirebaseStorage.getInstance();
@@ -182,7 +182,7 @@ public class AdminActivity extends AppCompatActivity{
 
         SPDept =  sharedPreferences.getString(StringDeclarations.PASSWORDY, null);
 
-        nextevent.setOnClickListener(new View.OnClickListener() {
+        /*nextevent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -214,7 +214,7 @@ public class AdminActivity extends AppCompatActivity{
 
 
             }
-        });
+        });*/
 
         if(SPDept != null){
 
@@ -539,14 +539,14 @@ public class AdminActivity extends AppCompatActivity{
             mDatabase.child(dep).child(admin_ID).child("Interested:").setValue(interestedCount);
             mDatabase.child(dep).child(admin_ID).child("Not Interested:").setValue(notIntCount);
 
-            if(punisher == 0)
+            /*if(punisher == 0)
             {
                 mDatabase.child(dep).child(admin_ID).child("Next Event: ").child("Event: ").setValue("NO UPCOMING EVENTS");
                 mDatabase.child(dep).child(admin_ID).child("Next Event: ").child("Date: ").setValue("N/A");
                 mDatabase.child(dep).child(admin_ID).child("Next Event: ").child("Description: ").setValue("NO DESCRIPTION");
 
             }
-
+*/
 
             startActivity(new Intent(AdminActivity.this, HomeActivity.class));
             finish();
