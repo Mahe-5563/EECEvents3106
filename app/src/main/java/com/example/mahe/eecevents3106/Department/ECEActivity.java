@@ -176,6 +176,10 @@ public class ECEActivity extends AppCompatActivity implements AdapterView.OnItem
                     String imageURL = snapshot.child("Image URL:").getValue().toString();
                     invi = snapshot.child("Invitation:").getValue().toString();
 
+
+                    imageURL = imageURL.replaceAll("\\]","");
+                    imageURL = imageURL.replaceAll("\\[","");
+
                     gngCount = snapshot.child("Going:").getValue().toString();
                     intCount = snapshot.child("Interested:").getValue().toString();
                     ntCount = snapshot.child("Not Interested:").getValue().toString();

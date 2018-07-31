@@ -175,6 +175,11 @@ public class CSEActivity extends AppCompatActivity implements AdapterView.OnItem
                     invi = snapshot.child("Invitation:").getValue().toString();
                     String imageURL = snapshot.child("Image URL:").getValue().toString();
 
+                    imageURL = imageURL.replaceAll("\\]","");
+                    imageURL = imageURL.replaceAll("\\[","");
+
+                    Log.d("CHECK IMAGE URL:", imageURL);
+
                     gngCount = snapshot.child("Going:").getValue().toString();
                     intCount = snapshot.child("Interested:").getValue().toString();
                     ntCount = snapshot.child("Not Interested:").getValue().toString();

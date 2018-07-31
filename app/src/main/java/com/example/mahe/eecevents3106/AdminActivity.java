@@ -1,5 +1,6 @@
 package com.example.mahe.eecevents3106;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -28,8 +29,11 @@ import android.widget.Toast;
 import com.example.mahe.eecevents3106.Classes.StringDeclarations;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -37,6 +41,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.UUID;
 
@@ -575,6 +580,8 @@ public class AdminActivity extends AppCompatActivity{
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
+            final String[] imagde = new String[1];
+
 
             if(randomUUID.equals(""))
             {
@@ -585,23 +592,8 @@ public class AdminActivity extends AppCompatActivity{
             else
             {
 
-
                 final StorageReference ref = storageReference.child("images/" + department + "/" + event);
 
-               // filePath = Uri.fromFile(new File("Kajak"));
-
-
-                /*ref.child("images/" + department + "/" + event).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
-
-                        image_url = uri.toString();
-
-
-
-                    }
-                });
-*/
                 ref.putFile(filePath)
                         .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                             @Override
@@ -609,45 +601,34 @@ public class AdminActivity extends AppCompatActivity{
                                 progressDialog.dismiss();
                                 Toast.makeText(AdminActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
 
-                                image_url = taskSnapshot.getStorage().getDownloadUrl().toString();
-
-                                //String sam = taskSnapshot.getStorage().getPath();
-
-  //                              image_url = taskSnapshot.getStorage().getRoot().toString();
-                                Log.d("EEC Events: ",image_url);
-                                /*String img = taskSnapshot.getUploadSessionUri().getPath();
-                                Log.d("EEC Events: ", img);
-                                String img1 = taskSnapshot.getStorage().getPath();
-                                Log.d("EEC Events",img1);
-                                String img2 = taskSnapshot.getStorage().child("images/" + department + "/" + event).toString();
-                                Log.d("EEC Events",img2);
-*/
-
-                              //  Log.d("EEC Events: ",image_url);
-
-                                /*.addOnSuccessListener(new OnSuccessListener<Uri>() {*/
-                                    /*@Override
+                                ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                    @SuppressLint("LongLogTag")
+                                    @Override
                                     public void onSuccess(Uri uri) {
 
-                                        Uri downn = uri;
+                                       // Log.d("EEEE-EEEE-CCCC DOWNLOAD URL:", uri.toString());
 
-                                        image_url = downn.toString();
+                                        //image_url = uri.toString();
 
-                                        Log.d("EEC EVents: ImageURL", image_url);
+                                        imagde[0] = uri.toString();
+
+                                        Log.d("EEEE-EEEE-CCCC DOWNLOAD URL:", Arrays.toString(imagde));
+
+                                        if(filePath != null){
+
+                                            String  counti = String.valueOf(intCount);
+                                            String counta = String.valueOf(attCount);
+                                            String countn = String.valueOf(notCount);
+
+                                            updateData(adminID ,event, dateGet, descrip, invitation, Arrays.toString(imagde), counta, counti, countn);
+                                        }
+
 
                                     }
                                 });
-*/
-                                if(filePath != null){
 
-                                    //image_url = filePath.toString();
+//                                Log.d("EEC Events: ",image_url);
 
-                                    String  counti = String.valueOf(intCount);
-                                    String counta = String.valueOf(attCount);
-                                    String countn = String.valueOf(notCount);
-
-                                    updateData(adminID ,event, dateGet, descrip, invitation, image_url, counta, counti, countn);
-                                }
 
                             }
                         })
@@ -656,15 +637,6 @@ public class AdminActivity extends AppCompatActivity{
                             public void onFailure(@NonNull Exception e) {
                                 progressDialog.dismiss();
                                 Toast.makeText(AdminActivity.this, "Failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                                //Calculates the Uploading percentage.
-                                double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot
-                                        .getTotalByteCount());
-                                progressDialog.setMessage("Uploaded " + (int) progress + "%");
                             }
                         });
             }
